@@ -8,8 +8,8 @@ A RESTful API backend built with Laravel, designed to support user authenticatio
 
 | Component         | Version                           |
 | ----------------- | --------------------------------- |
-| PHP               | ^8.1 or newer                     |
-| Laravel Framework | ^10.x                             |
+| PHP               | ^8.4 or newer                     |
+| Laravel Framework | ^12.x                             |
 | Composer          | ^2.x                              |
 | Database          | MySQL / PostgreSQL (configurable) |
 | API Auth          | Laravel Sanctum                   |
