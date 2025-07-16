@@ -61,6 +61,8 @@ API will be available at:
 
 `http://localhost:8000/api`
 
+---
+
 ## Production URL
 
 `https://profilehubbe-1.onrender.com/`
