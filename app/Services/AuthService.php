@@ -12,16 +12,16 @@ class AuthService
 {
     public function register(array $input)
     {
-        if (!isset($input['password'], $input['confirmPassword'])) {
+        if (!isset($input['password'], $input['confirm_password'])) {
             throw new \InvalidArgumentException("Password and confirmation are required.");
         }
 
-        if ($input['password'] !== $input['confirmPassword']) {
+        if ($input['password'] !== $input['confirm_password']) {
             throw new \InvalidArgumentException("Password confirmation does not match.");
         }
 
         $input['password'] = Hash::make($input['password']);
-        unset($input['confirmPassword']);
+        unset($input['confirm_password']);
 
         $user = User::create($input);
         $token = $user->createToken('auth_token')->plainTextToken;
