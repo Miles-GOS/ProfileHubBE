@@ -122,7 +122,7 @@ fi\n\
 # Check if we should run fresh migrations (for first deployment)\n\
 if [ "$RUN_FRESH_MIGRATION" = "true" ]; then\n\
   echo "Running fresh migrations with seeding..."\n\
-  php artisan migrate:fresh --seed --force\n\
+  php artisan migrate:fresh --force\n\
 else\n\
   echo "Running regular migrations..."\n\
   php artisan migrate --force\n\
@@ -130,7 +130,6 @@ else\n\
   # Only run seeders if SKIP_SEEDING is not set to true\n\
   if [ "$SKIP_SEEDING" != "true" ]; then\n\
     echo "Running database seeders..."\n\
-    php artisan db:seed --force\n\
   else\n\
     echo "Skipping database seeding"\n\
   fi\n\
