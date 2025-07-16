@@ -28,6 +28,7 @@ WORKDIR /var/www
 
 # Copy the Laravel application files
 COPY . .
+RUN echo "APP_NAME=Laravel\nAPP_ENV=production\nAPP_KEY=\nAPP_DEBUG=false\nAPP_URL=http://localhost" > /var/www/.env
 
 # Install Composer dependencies for production
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
